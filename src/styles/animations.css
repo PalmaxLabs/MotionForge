@@ -1,0 +1,741 @@
+/* ═══════════════════════════════════════════════════
+   MATERIAL MOTION GALLERY - ANIMATIONS LIBRARY
+   50+ CSS Animations ready to copy-paste
+═══════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────────────
+   CATEGORY 1: HOVER EFFECTS (15)
+───────────────────────────────────────────────── */
+
+/* 1. Hover Zoom */
+.anim-hover-zoom {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.anim-hover-zoom:hover {
+  transform: scale(1.08);
+}
+
+/* 2. Hover Elevate (Material Shadow) */
+.anim-hover-elevate {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+}
+.anim-hover-elevate:hover {
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  transform: translateY(-4px);
+}
+
+/* 3. Hover Glow */
+.anim-hover-glow {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.anim-hover-glow:hover {
+  box-shadow: 0 0 20px rgba(30, 157, 241, 0.5), 0 0 40px rgba(30, 157, 241, 0.2);
+  transform: translateY(-2px);
+}
+
+/* 4. Hover Border Radius Morph */
+.anim-hover-morph {
+  border-radius: 16px;
+  transition: border-radius 300ms cubic-bezier(0.34, 1.56, 0.64, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.anim-hover-morph:hover {
+  border-radius: 50%;
+  transform: scale(1.05);
+}
+
+/* 5. Hover ScaleX (Underline expand) */
+.anim-hover-scalex {
+  position: relative;
+}
+.anim-hover-scalex::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent-primary, #1e9df1);
+  border-radius: 1px;
+  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1), left 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.anim-hover-scalex:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* 6. Hover Tilt */
+.anim-hover-tilt {
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.anim-hover-tilt:hover {
+  transform: perspective(800px) rotateX(8deg) rotateY(-8deg) scale(1.02);
+}
+
+/* 7. Hover Color Sweep */
+.anim-hover-sweep {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.anim-hover-sweep::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30,157,241,0.1), rgba(139,92,246,0.1));
+  transform: translateX(-100%);
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+.anim-hover-sweep:hover::before {
+  transform: translateX(0);
+}
+
+/* 8. Hover Shake */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px) rotate(-1deg); }
+  40% { transform: translateX(4px) rotate(1deg); }
+  60% { transform: translateX(-3px) rotate(-0.5deg); }
+  80% { transform: translateX(3px) rotate(0.5deg); }
+}
+.anim-hover-shake:hover {
+  animation: shake 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 9. Hover Float */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+.anim-hover-float:hover {
+  animation: float 2s ease-in-out infinite;
+}
+
+/* 10. Hover Pulse Ring */
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(30, 157, 241, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(30, 157, 241, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(30, 157, 241, 0); }
+}
+.anim-hover-pulse:hover {
+  animation: pulseRing 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* 11. Hover Jelly */
+@keyframes jelly {
+  0%, 100% { transform: scale(1, 1); }
+  25% { transform: scale(0.95, 1.05); }
+  50% { transform: scale(1.05, 0.95); }
+  75% { transform: scale(0.98, 1.02); }
+}
+.anim-hover-jelly:hover {
+  animation: jelly 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 12. Hover Rotate */
+.anim-hover-rotate {
+  transition: transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.anim-hover-rotate:hover {
+  transform: rotate(15deg) scale(1.05);
+}
+
+/* 13. Hover Slide Icon */
+.anim-hover-slide-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  overflow: hidden;
+}
+.anim-hover-slide-icon .icon {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.anim-hover-slide-icon:hover .icon {
+  transform: translateX(4px);
+}
+
+/* 14. Hover Background Shift */
+.anim-hover-bg-shift {
+  background: var(--accent-soft, rgba(30,157,241,0.1));
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.anim-hover-bg-shift:hover {
+  background: var(--accent-primary, #1e9df1);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* 15. Hover 3D Flip Preview */
+.anim-hover-flip {
+  perspective: 600px;
+  cursor: pointer;
+}
+.anim-hover-flip-inner {
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  position: relative;
+}
+.anim-hover-flip:hover .anim-hover-flip-inner {
+  transform: rotateY(180deg);
+}
+.anim-flip-front, .anim-flip-back {
+  backface-visibility: hidden;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.anim-flip-back {
+  transform: rotateY(180deg);
+  background: var(--accent-primary, #1e9df1);
+  color: white;
+  border-radius: inherit;
+}
+
+/* ─────────────────────────────────────────────────
+   CATEGORY 2: ENTER / EXIT (15)
+───────────────────────────────────────────────── */
+
+/* 16. Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.anim-fade-in {
+  animation: fadeIn 400ms cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+/* 17. Fade In Up */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.anim-fade-in-up {
+  animation: fadeInUp 400ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+
+/* 18. Fade In Down */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.anim-fade-in-down {
+  animation: fadeInDown 400ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+
+/* 19. Scale In */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.88); }
+  to { opacity: 1; transform: scale(1); }
+}
+.anim-scale-in {
+  animation: scaleIn 350ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* 20. Scale In From Center */
+@keyframes scaleInCenter {
+  from { opacity: 0; transform: scale(0) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.anim-scale-in-center {
+  transform-origin: center;
+  animation: scaleInCenter 400ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* 21. Slide In Left */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.anim-slide-in-left {
+  animation: slideInLeft 400ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+
+/* 22. Slide In Right */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.anim-slide-in-right {
+  animation: slideInRight 400ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+
+/* 23. Flip In X */
+@keyframes flipInX {
+  from { opacity: 0; transform: perspective(400px) rotateX(-90deg); }
+  to { opacity: 1; transform: perspective(400px) rotateX(0); }
+}
+.anim-flip-in-x {
+  animation: flipInX 600ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+
+/* 24. Flip In Y */
+@keyframes flipInY {
+  from { opacity: 0; transform: perspective(400px) rotateY(-90deg); }
+  to { opacity: 1; transform: perspective(400px) rotateY(0); }
+}
+.anim-flip-in-y {
+  animation: flipInY 600ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+
+/* 25. Bounce In */
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 0.9; transform: scale(1.05); }
+  70% { transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.anim-bounce-in {
+  animation: bounceIn 600ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* 26. Stagger Fade In */
+@keyframes staggerFadeIn {
+  from { opacity: 0; transform: translateY(16px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.anim-stagger > * {
+  opacity: 0;
+  animation: staggerFadeIn 400ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+.anim-stagger > *:nth-child(1) { animation-delay: 0ms; }
+.anim-stagger > *:nth-child(2) { animation-delay: 80ms; }
+.anim-stagger > *:nth-child(3) { animation-delay: 160ms; }
+.anim-stagger > *:nth-child(4) { animation-delay: 240ms; }
+.anim-stagger > *:nth-child(5) { animation-delay: 320ms; }
+
+/* 27. Rotate In */
+@keyframes rotateIn {
+  from { opacity: 0; transform: rotate(-200deg) scale(0.5); }
+  to { opacity: 1; transform: rotate(0) scale(1); }
+}
+.anim-rotate-in {
+  animation: rotateIn 600ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* 28. Zoom Out (Exit) */
+@keyframes zoomOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.85); }
+}
+.anim-zoom-out {
+  animation: zoomOut 300ms cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+/* 29. Slide Up Exit */
+@keyframes slideUpExit {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-20px); }
+}
+.anim-slide-up-exit {
+  animation: slideUpExit 300ms cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+/* 30. Expand In */
+@keyframes expandIn {
+  from { opacity: 0; transform: scaleX(0); transform-origin: left; }
+  to { opacity: 1; transform: scaleX(1); transform-origin: left; }
+}
+.anim-expand-in {
+  animation: expandIn 400ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+
+/* ─────────────────────────────────────────────────
+   CATEGORY 3: VIEW TRANSITIONS (5)
+───────────────────────────────────────────────── */
+
+/* 31. Cross Fade */
+@keyframes crossFadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes crossFadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(1.02); }
+}
+.anim-cross-fade-in {
+  animation: crossFadeIn 350ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+.anim-cross-fade-out {
+  animation: crossFadeOut 350ms cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+/* 32. Page Morph */
+@keyframes pageMorphIn {
+  from { opacity: 0; transform: translateY(30px) scale(0.95); filter: blur(4px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+.anim-page-morph {
+  animation: pageMorphIn 500ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+
+/* 33. List to Detail */
+@keyframes listToDetail {
+  from { opacity: 0; transform: scale(0.9) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.anim-list-to-detail {
+  animation: listToDetail 400ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+
+/* 34. Shared Element */
+@keyframes sharedElementExpand {
+  from { transform: scale(0.3) translate(-40%, -40%); opacity: 0; border-radius: 50%; }
+  to { transform: scale(1) translate(0, 0); opacity: 1; border-radius: 16px; }
+}
+.anim-shared-element {
+  animation: sharedElementExpand 500ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+
+/* 35. Slide Transition */
+@keyframes slideTransitionIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideTransitionOut {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(-30%); opacity: 0; }
+}
+.anim-slide-transition-in {
+  animation: slideTransitionIn 400ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+
+/* ─────────────────────────────────────────────────
+   CATEGORY 4: MICROINTERACTIONS (10)
+───────────────────────────────────────────────── */
+
+/* 36. Loading Spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.anim-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(30, 157, 241, 0.15);
+  border-top-color: var(--accent-primary, #1e9df1);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* 37. Loading Dots */
+@keyframes dotBounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1); opacity: 1; }
+}
+.anim-dots span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-primary, #1e9df1);
+  animation: dotBounce 1.2s ease-in-out infinite;
+}
+.anim-dots span:nth-child(2) { animation-delay: 0.2s; }
+.anim-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+/* 38. Button Press */
+.anim-btn-press {
+  transition: transform 100ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 100ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.anim-btn-press:active {
+  transform: scale(0.94);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* 39. Ripple Effect */
+@keyframes ripple {
+  from { transform: scale(0); opacity: 0.6; }
+  to { transform: scale(4); opacity: 0; }
+}
+.anim-ripple {
+  position: relative;
+  overflow: hidden;
+}
+.anim-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.8s ease-out;
+}
+
+/* 40. Progress Bar */
+@keyframes progressFill {
+  from { width: 0%; }
+  to { width: 75%; }
+}
+.anim-progress-bar {
+  height: 6px;
+  background: rgba(30, 157, 241, 0.15);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.anim-progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary, #1e9df1), #8b5cf6);
+  border-radius: 3px;
+  animation: progressFill 1.5s cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+
+/* 41. Toggle Switch */
+.anim-toggle-switch {
+  display: inline-flex;
+  width: 52px;
+  height: 28px;
+  background: var(--n-300, #cbd5e1);
+  border-radius: 14px;
+  position: relative;
+  cursor: pointer;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.anim-toggle-switch.active {
+  background: var(--accent-primary, #1e9df1);
+}
+.anim-toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.anim-toggle-switch.active .anim-toggle-knob {
+  transform: translateX(24px);
+}
+
+/* 42. Skeleton Pulse */
+@keyframes skeletonPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.anim-skeleton {
+  background: linear-gradient(90deg, var(--n-100, #f1f5f9) 25%, var(--n-200, #e2e8f0) 50%, var(--n-100, #f1f5f9) 75%);
+  background-size: 200% 100%;
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+/* 43. Checkmark Draw */
+@keyframes checkDraw {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: 0; }
+}
+.anim-check path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: checkDraw 500ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards 200ms;
+}
+
+/* 44. Number Count Up */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.anim-count-up {
+  overflow: hidden;
+  display: inline-block;
+}
+.anim-count-up span {
+  display: inline-block;
+  animation: countUp 400ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards;
+}
+
+/* 45. Heart Burst */
+@keyframes heartBurst {
+  0% { transform: scale(1); }
+  30% { transform: scale(0.7); }
+  60% { transform: scale(1.3); }
+  80% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+.anim-heart-burst:active {
+  animation: heartBurst 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: #f4212e;
+}
+
+/* ─────────────────────────────────────────────────
+   CATEGORY 5: SCROLL ANIMATIONS (5)
+───────────────────────────────────────────────── */
+
+/* 46. Parallax (CSS only) */
+.anim-parallax {
+  transform: translateZ(0);
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+/* 47. Reveal on Scroll (via IntersectionObserver class toggle) */
+.anim-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 600ms cubic-bezier(0.05, 0.7, 0.1, 1), transform 600ms cubic-bezier(0.05, 0.7, 0.1, 1);
+}
+.anim-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 48. Fade Reveal from Left */
+.anim-reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 500ms cubic-bezier(0.05, 0.7, 0.1, 1), transform 500ms cubic-bezier(0.05, 0.7, 0.1, 1);
+}
+.anim-reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 49. Sticky Header Shrink */
+.anim-sticky-header {
+  position: sticky;
+  top: 0;
+  transition: padding 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+}
+.anim-sticky-header.scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* 50. Marquee Scroll */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.anim-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.anim-marquee-inner {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+.anim-marquee:hover .anim-marquee-inner {
+  animation-play-state: paused;
+}
+
+/* ─────────────────────────────────────────────────
+   BONUS ANIMATIONS (51-56)
+───────────────────────────────────────────────── */
+
+/* 51. Gradient Shift */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.anim-gradient-shift {
+  background: linear-gradient(270deg, #1e9df1, #8b5cf6, #ec4899, #1e9df1);
+  background-size: 300% 300%;
+  animation: gradientShift 4s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 52. Morphing Background */
+@keyframes morphBg {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  33% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  66% { border-radius: 60% 40% 30% 70% / 40% 50% 60% 50%; }
+}
+.anim-morph-bg {
+  background: linear-gradient(135deg, var(--accent-primary, #1e9df1), #8b5cf6);
+  animation: morphBg 6s ease-in-out infinite;
+}
+
+/* 53. Typewriter */
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+.anim-typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--accent-primary, #1e9df1);
+  animation: typewriter 2s steps(20) forwards, blink 0.75s step-end infinite;
+  width: 0;
+}
+
+/* 54. Neon Glow */
+@keyframes neonPulse {
+  0%, 100% { text-shadow: 0 0 8px rgba(30,157,241,0.8), 0 0 20px rgba(30,157,241,0.4); }
+  50% { text-shadow: 0 0 16px rgba(30,157,241,1), 0 0 40px rgba(30,157,241,0.6); }
+}
+.anim-neon {
+  color: var(--accent-primary, #1e9df1);
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+/* 55. Card Swing */
+@keyframes cardSwing {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(5deg); }
+  40% { transform: rotate(-4deg); }
+  60% { transform: rotate(3deg); }
+  80% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+.anim-card-swing:hover {
+  animation: cardSwing 600ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: top center;
+}
+
+/* 56. Focus Ring */
+.anim-focus-ring {
+  outline: none;
+  transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.anim-focus-ring:focus-visible {
+  box-shadow: 0 0 0 3px rgba(30, 157, 241, 0.4);
+}
+
+/* ─────────────────────────────────────────────────
+   PREVIEW CONTAINERS (for gallery cards)
+───────────────────────────────────────────────── */
+.preview-box {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(30,157,241,0.05), rgba(139,92,246,0.05));
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.preview-element {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent-primary, #1e9df1), #8b5cf6);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.preview-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--n-700, #334155);
+}
